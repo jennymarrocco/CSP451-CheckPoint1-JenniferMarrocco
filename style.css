@@ -2,3 +2,4 @@ body { font-family: Arial, sans-serif; margin: 20px; }
 h1 { color: navy; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
+main { max-width: 720px: margin: 0 auto; }
