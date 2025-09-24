@@ -16,4 +16,5 @@ It demonstrates how to:
    ```bash
    git clone https://github.com/jennymarrocco/CSP451-CheckPoint1-JenniferMarrocco.git
 
+##Added a new login page (login.html) and linked it from the homepage. 
 
