@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; }
+    label { display:block; margin: .5rem 0; }
+    input { padding:.5rem; width: 100%; max-width: 300px; }
+    button { padding:.6rem 1rem; }
+    #status { margin-top: 1rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Login</h1>
+  <form id="loginForm">
+    <label>Username <input name="username" required></label>
+    <label>Password <input name="password" type="password" required></label>
+    <button type="submit">Sign in</button>
+  </form>
+  <p id="status"></p>
+  <script>
+    // Simple demo-only "auth": just checks non-empty fields
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const u = e.target.username.value.trim();
+      const p = e.target.password.value.trim();
+      if (!u || !p) {
+        document.getElementById('status').textContent = "Please enter both fields.";
+        return;
+      }
+      document.getElementById('status').textContent = "Logged in (demo).";
+      console.log("Demo login for:", u);
+    });
+  </script>
+</body>
+</html>
