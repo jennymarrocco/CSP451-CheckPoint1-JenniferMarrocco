@@ -1,0 +1,10 @@
+name: Hello CI
+on:
+  push:         # run on ANY push to any branch
+  workflow_dispatch:  # run manually from Actions tab
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello from GitHub Actions"
