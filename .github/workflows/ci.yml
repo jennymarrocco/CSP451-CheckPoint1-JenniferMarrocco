@@ -1,0 +1,24 @@
+name: CI Pipeline
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Running build job"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running tests (simulated)"
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Linting code with ESLint (simulated)"
+
+
